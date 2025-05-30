@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: "/portfolio",
-  assetPrefix: "/portfolio",
-  output: "export", // Make sure this is set for static export
+  // assetPrefix: "/portfolio", // This should be removed as per previous instructions
+  output: "export", // THIS IS CRUCIAL
   images: {
-    unoptimized: true, // Add this line
+    unoptimized: true,
   },
 };
 

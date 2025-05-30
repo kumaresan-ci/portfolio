@@ -20,13 +20,10 @@ import Link from "next/link";
 import Image from "next/image"; // Import Image
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-// It's good practice to get the basePath from a dynamic source if possible,
-// especially for static exports where it's known at build time.
-// You can use a process.env variable, or a constant that mirrors next.config.mjs
-// For simplicity here, I'll hardcode it, but consider a build-time env variable.
-// Make sure this matches your basePath in next.config.mjs
-const BASE_PATH = "/portfolio";
+// Import your custom image loader
+import imageLoader from "@/utils/imageLoader"; // Adjust path as needed
 
+// Projects data - paths now start directly from public/
 const projects = [
   {
     num: "01",
@@ -35,8 +32,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
-    // Manually prepend BASE_PATH
-    image: `${BASE_PATH}/assets/work/thumb1.png`,
+    image: "/assets/work/thumb1.png", // NO /portfolio prefix here
     live: "",
     github: "",
   },
@@ -47,8 +43,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    // Manually prepend BASE_PATH
-    image: `${BASE_PATH}/assets/work/thumb2.png`,
+    image: "/assets/work/thumb2.png", // NO /portfolio prefix here
     live: "",
     github: "",
   },
@@ -59,8 +54,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Python" }, { name: "Django" }, { name: "Javascript" }],
-    // Manually prepend BASE_PATH
-    image: `${BASE_PATH}/assets/work/thumb3.png`,
+    image: "/assets/work/thumb3.png", // NO /portfolio prefix here
     live: "",
     github: "",
   },
@@ -158,7 +152,8 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src={project.image} // This now includes the BASE_PATH
+                          loader={imageLoader} // ADD THIS LINE
+                          src={project.image}
                           fill
                           className="object-cover"
                           alt=""
