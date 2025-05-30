@@ -23,12 +23,6 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* You no longer need to manually add the <meta name="viewport"> tag here */}
-      {/* Next.js will automatically inject it based on the `export const viewport` */}
-      <head>
-        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
-        {/* <title>Create Next App</title> - This is also handled by `export const metadata.title` */}
-      </head>
       <body className={`${jetbrainsMono.variable} antialiased`}>
         <Header />
         <StairTransition />
