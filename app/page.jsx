@@ -8,6 +8,7 @@ import Stats from "@/components/Stats";
 const Home = () => {
   return (
     <section className="h-full">
+      <meta name="viewport" content="viewport-fit=cover" />
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
