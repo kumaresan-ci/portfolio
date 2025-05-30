@@ -59,7 +59,7 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/resume/badge.svg",
+  icon: "/portfolio/assets/resume/badge.svg",
   title: "My experience",
   description:
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
@@ -79,7 +79,7 @@ const experience = {
 
 // experience data
 const education = {
-  icon: "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/resume/cap.svg",
+  icon: "/portfolio/assets/resume/cap.svg",
   title: "My education",
   description:
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
