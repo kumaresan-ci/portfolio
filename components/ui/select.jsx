@@ -52,7 +52,7 @@ function SelectContent({ className, children, position = "popper", ...props }) {
         {...props}
       >
         <SelectScrollUpButton />
-        <SelectPrimitive.Viewport
+        {/* <SelectPrimitive.Viewport
           className={cn(
             "p-1",
             position === "popper" &&
@@ -60,7 +60,7 @@ function SelectContent({ className, children, position = "popper", ...props }) {
           )}
         >
           {children}
-        </SelectPrimitive.Viewport>
+        </SelectPrimitive.Viewport> */}
         <SelectScrollDownButton />
       </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
