@@ -1,3 +1,4 @@
+// page.jsx file in work folder inside of app folder
 "use client";
 
 import { motion } from "framer-motion";
@@ -16,8 +17,15 @@ import {
 } from "@/components/ui/tooltip";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"; // Import Image
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+
+// It's good practice to get the basePath from a dynamic source if possible,
+// especially for static exports where it's known at build time.
+// You can use a process.env variable, or a constant that mirrors next.config.mjs
+// For simplicity here, I'll hardcode it, but consider a build-time env variable.
+// Make sure this matches your basePath in next.config.mjs
+const BASE_PATH = "/portfolio";
 
 const projects = [
   {
@@ -27,7 +35,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+    // Manually prepend BASE_PATH
+    image: `${BASE_PATH}/assets/work/thumb1.png`,
     live: "",
     github: "",
   },
@@ -38,7 +47,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+    // Manually prepend BASE_PATH
+    image: `${BASE_PATH}/assets/work/thumb2.png`,
     live: "",
     github: "",
   },
@@ -49,7 +59,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Python" }, { name: "Django" }, { name: "Javascript" }],
-    image: "/assets/work/thumb3.png",
+    // Manually prepend BASE_PATH
+    image: `${BASE_PATH}/assets/work/thumb3.png`,
     live: "",
     github: "",
   },
@@ -59,11 +70,10 @@ const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
-    //get current slide index
     const currentIndex = swiper.activeIndex;
-    //update project state based on current slide index
     setProject(projects[currentIndex]);
   };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -148,7 +158,7 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src={project.image}
+                          src={project.image} // This now includes the BASE_PATH
                           fill
                           className="object-cover"
                           alt=""
