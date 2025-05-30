@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import assetPrefix from "/next.config";
 
 const Photo = () => {
   return (
@@ -24,7 +23,7 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src={`${assetPrefix}/assets/Untitled (3).png`}
+            src="/assets/Untitled (3).png"
             priority
             quality={100}
             fill
