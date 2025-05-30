@@ -1,4 +1,3 @@
-// page.jsx file in work folder inside of app folder
 "use client";
 
 import { motion } from "framer-motion";
@@ -17,13 +16,9 @@ import {
 } from "@/components/ui/tooltip";
 
 import Link from "next/link";
-import Image from "next/image"; // Import Image
+import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
-// Import your custom image loader
-import imageLoader from "@/utils/imageLoader"; // Adjust path as needed
-
-// Projects data - paths now start directly from public/
 const projects = [
   {
     num: "01",
@@ -32,7 +27,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png", // NO /portfolio prefix here
+    image: "/assets/work/thumb1.png",
     live: "",
     github: "",
   },
@@ -43,7 +38,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png", // NO /portfolio prefix here
+    image: "/assets/work/thumb2.png",
     live: "",
     github: "",
   },
@@ -54,7 +49,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Python" }, { name: "Django" }, { name: "Javascript" }],
-    image: "/assets/work/thumb3.png", // NO /portfolio prefix here
+    image: "/assets/work/thumb3.png",
     live: "",
     github: "",
   },
@@ -64,10 +59,11 @@ const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
+    //get current slide index
     const currentIndex = swiper.activeIndex;
+    //update project state based on current slide index
     setProject(projects[currentIndex]);
   };
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -152,7 +148,6 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          loader={imageLoader} // ADD THIS LINE
                           src={project.image}
                           fill
                           className="object-cover"
