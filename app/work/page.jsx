@@ -27,7 +27,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "HTML" }, { name: "CSS" }, { name: "Javascript" }],
-    image: "/portfolio/assets/work/thumb1.png",
+    image:
+      "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/work/thumb1.png",
     live: "",
     github: "",
   },
@@ -38,7 +39,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/portfolio/assets/work/thumb2.png",
+    image:
+      "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/work/thumb2.png",
     live: "",
     github: "",
   },
@@ -49,7 +51,8 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nam recusandae aspernatur illum distinctio atque.",
     stack: [{ name: "Python" }, { name: "Django" }, { name: "Javascript" }],
-    image: "/portfolio/assets/work/thumb3.png",
+    image:
+      "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/work/thumb3.png",
     live: "",
     github: "",
   },

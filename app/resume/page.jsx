@@ -59,7 +59,7 @@ const about = {
 
 // experience data
 const experience = {
-  icon: "/portfolio/assets/resume/badge.svg",
+  icon: "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/resume/badge.svg",
   title: "My experience",
   description:
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
@@ -79,7 +79,7 @@ const experience = {
 
 // experience data
 const education = {
-  icon: "/portfolio/assets/resume/cap.svg",
+  icon: "https://raw.githubusercontent.com/kumaresan-ci/portfolio/main/public/assets/resume/cap.svg",
   title: "My education",
   description:
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
@@ -265,7 +265,10 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
