@@ -30,8 +30,6 @@ const projects = [
       { name: "Javascript" },
       { name: "Node.js" },
       { name: "Metamask" },
-      { name: "Ganache" },
-      { name: "Truffle" },
       { name: "Blockchain" },
     ],
     image: "/assets/work/vote.png",
