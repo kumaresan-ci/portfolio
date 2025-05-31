@@ -6,30 +6,30 @@ import Link from "next/link";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Bug Fixing & System Debugging",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat unde.",
+      "I can identify, trace, and resolve frontend and backend issues efficiently. Whether it’s a browser bug, API error, or system misbehavior, I aim to deliver clean, permanent fixes that improve stability and user experience.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "Workflow Automation",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat unde.",
+      "I design and build automation scripts and tools that save time, reduce manual work, and improve accuracy. From backend task automation to XML/Excel data processing, I create scalable solutions that integrate well with existing systems.",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Technical Support Engineering",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat unde.",
+      "I can handle issue tracking, root cause analysis, and customer-facing support — with a developer mindset. I help bridge the gap between support teams and engineering by understanding both technical and operational needs.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Full-Stack Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, quaerat unde.",
+      "I continue to build projects using Python, Node.js, React, and Django. I enjoy combining logic and UI to create complete solutions — from backend logic to interactive UIs — and I'm constantly learning to grow into a full-stack development role.",
     href: "",
   },
 ];
@@ -67,7 +67,7 @@ const Services = () => {
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500">
+                <h2 className="text-[35px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500">
                   {service.title}
                 </h2>
                 {/* desciption */}

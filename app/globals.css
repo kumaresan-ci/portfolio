@@ -114,7 +114,7 @@
 
 @layer base {
   body {
-    @apply bg-primary text-white leading-loose;
+    @apply bg-primary text-white;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -130,5 +130,27 @@
   }
   .group:hover .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
+  }
+  .typed-loop {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ff99;
+    animation: typing-loop 6s steps(40, end) infinite;
+  }
+
+  @keyframes typing-loop {
+    0% {
+      width: 0;
+    }
+    45% {
+      width: 100%;
+    }
+    55% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
   }
 }

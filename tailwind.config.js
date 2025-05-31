@@ -206,7 +206,20 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "15px",
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1200px",
+        "2xl": "1400px", // more standard size than 1536px
+      },
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "2rem",
+        xl: "2.5rem",
+        "2xl": "3rem",
+      },
     },
     content: {
       none: "none",
@@ -771,13 +784,6 @@ module.exports = {
       110: "1.1",
       125: "1.25",
       150: "1.5",
-    },
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "960px",
-      xl: "1200px",
-      "2xl": "1536px",
     },
     scrollMargin: ({ theme }) => ({
       ...theme("spacing"),

@@ -9,7 +9,15 @@ import {
   FaPython,
 } from "react-icons/fa";
 
-import { SiDjango } from "react-icons/si";
+import {
+  SiDjango,
+  SiPostgresql,
+  SiMysql,
+  SiGitlab,
+  SiExpress,
+} from "react-icons/si";
+
+import { MdBugReport } from "react-icons/md";
 
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 
@@ -28,7 +36,7 @@ import { TabsTrigger } from "@/components/ui/tabs";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque?",
+    "I’m Kumaresan, a problem solver at heart. For 2 years, I’ve worked as a Technical Support Engineer, resolving bugs and improving systems across publishing platforms. Along the way, I’ve automated workflows, built internal tools using Python and Django, and picked up modern stacks like Node.js and React. I’m now stepping forward to take on more development challenges, still grounded in my passion for making things work better.",
   info: [
     {
       fieldName: "Name",
@@ -61,8 +69,9 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
+  description: [
+    "I have 2 years of professional experience working in Technical Support Engineer role focused on automation, debugging, and backend tools. At Kriyadocs, I resolved production issues, built internal tools, and automated workflows using Python, Django, and Node.js. These experiences strengthened my problem-solving mindset and pushed me toward software development.",
+  ],
   items: [
     {
       company: "Kriyadocs",
@@ -82,7 +91,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
+    "During my degree, I built a strong foundation in computer science concepts, programming, and problem-solving. I also developed an early interest in backend systems and automation, which later shaped my professional goals.",
   items: [
     {
       institution: "Prince Shri Venkateshwara Padmavathy Engineering College",
@@ -94,8 +103,7 @@ const education = {
 
 const skills = {
   title: "My skills",
-  description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, doloremque.",
+  description: "",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -124,6 +132,26 @@ const skills = {
     {
       icon: <SiDjango />,
       name: "Django",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiGitlab />,
+      name: "GitLab",
+    },
+    {
+      icon: <MdBugReport />,
+      name: "Debugging",
     },
   ],
 };
@@ -156,10 +184,12 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
-                <ScrollArea className="h-[400px]">
+                <ul className="text-white/60 space-y-2 text-left">
+                  {experience.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+                <ScrollArea className="h-[190px]">
                   <ul className="grid  grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
@@ -190,7 +220,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -225,11 +255,11 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-4 md:grid-cols-6 gap-3 mt-5">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
@@ -259,7 +289,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[1000px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">

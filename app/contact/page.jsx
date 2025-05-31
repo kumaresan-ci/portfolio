@@ -21,17 +21,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 321 654 876",
+    description: "(+91)-9962837396",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "youremail@gmail.com",
+    description: "kumares241@gmail.com",
   },
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "Code Corner, Tech Town 13579",
+    description: "Medavakkam, Chennai, 600100",
   },
 ];
 
