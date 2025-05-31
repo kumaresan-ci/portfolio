@@ -28,7 +28,7 @@ const MobileNav = () => {
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Luke<span className="text-[#00ff99]">.</span>
+              Code<span className="text-[#00ff99]">.</span>
             </h1>
           </Link>
         </div>

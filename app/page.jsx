@@ -54,10 +54,10 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <div className="text-xl flex items-baseline gap-2">
+            <div className="text-xl flex flex-col xl:flex-row items-start xl:items-baseline gap-1 xl:gap-2 mb-4">
               <span>Technical Support Engineer</span>
               <span
-                className="text-[#00ff99] font-medium block min-w-[30ch] whitespace-nowrap border-[#00ff99] pr-1"
+                className="text-[#00ff99] font-medium block min-w-[20ch] border-[#00ff99] pr-1"
                 id="typed-text"
               ></span>
             </div>

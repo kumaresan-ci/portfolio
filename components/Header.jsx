@@ -10,7 +10,7 @@ const Header = () => {
         {/* logo */}
         <Link href="/">
           <h1 className="text-4xl font-semibold">
-            Luke<span className="text-[#00ff99]">.</span>
+            Code<span className="text-[#00ff99]">.</span>
           </h1>
         </Link>
 
@@ -23,7 +23,9 @@ const Header = () => {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden"><MobileNav/></div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
